@@ -1,0 +1,12 @@
+.search-field {
+    -fx-text-fill: #000000;
+    -fx-background-image: url('../images/search.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right center;
+    -fx-font-size: 17;
+    -fx-background-size: 12%;
+}
+
+.table {
+    -fx-font-size: 17;
+}
