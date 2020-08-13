@@ -1,3 +1,4 @@
+D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\interfaces\CommandeInterface.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\service\IProduit.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Produit.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Facture.java
@@ -7,6 +8,7 @@ D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Categorie.
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\service\ICategorie.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\interfaces\ProduitInterface.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Produit_Commande.java
+D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\service\IProduit_Commande.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Marque.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Commande.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\service\IClient.java
@@ -14,5 +16,6 @@ D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\ProduitAjo
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\interfaces\UsersInterface.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\Client.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\TypeClient.java
+D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\service\ICommande.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\service\ITypeClient.java
 D:\cour L3\java\SMD_Itech\smdLibrary\src\main\java\projets\java\model\User.java

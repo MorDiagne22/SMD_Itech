@@ -34,6 +34,11 @@ public class App
             ITypeClient iTypeClient = new TypeClientDao();
             registry.bind("typeclientRemote", iTypeClient);
 
+            ICommande iCommande = new CommandeDao();
+            registry.bind("commandeRemote", iCommande);
+
+            IProduit_Commande iProduit_commande = new Produit_CommandeDao();
+            registry.bind("produitcommandeRemote", iProduit_commande);
 
             System.out.println("Serveur lance sur le port 5003");
         }

@@ -267,6 +267,7 @@ public class addCommandeController implements Initializable , ProduitInterface {
         stage.setScene(scene);
         stage.show();
         controller.setListe(ITEMLIST);
+        controller.setSomme(somme);
 
     }
 

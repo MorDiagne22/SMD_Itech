@@ -13,6 +13,9 @@ projets\java\model\ProduitAjouter.class
 projets\java\model\TypeClient.class
 projets\java\interfaces\UsersInterface.class
 projets\java\model\Categorie.class
+projets\java\service\ICommande.class
+projets\java\interfaces\CommandeInterface.class
+projets\java\service\IProduit_Commande.class
 projets\java\model\Facture.class
 projets\java\model\Client.class
 projets\java\interfaces\ProduitInterface.class

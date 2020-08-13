@@ -84,4 +84,9 @@ public class Client implements Serializable {
     public void setCommandes(List<Commande> commandes) {
         this.commandes = commandes;
     }
+
+    @Override
+    public String toString() {
+        return nomComplet;
+    }
 }

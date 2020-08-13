@@ -1,7 +1,8 @@
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\user\addUserController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\utils\Fabrique.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\produit\updateProduitController.java
-D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\client\clientController.java
+D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\commandeclient\commandeController.java
+D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\commandeclient\addCommandeController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\user\UserController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\user\updateUserController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\login\loginController.java
@@ -9,7 +10,7 @@ D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\produit\Produit
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\App.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\accueil\accueilController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\utils\Utils.java
-D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\commande\addCommandeController.java
+D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\commandeclient\clientController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\categorie\addcategorieController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\controller\produit\addProduitController.java
 D:\cour L3\java\SMD_Itech\smdClient\src\main\java\smd\utils\LoadView.java

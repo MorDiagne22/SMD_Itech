@@ -1,8 +1,10 @@
 projets\java\utils\HibernateUtil.class
 projets\java\service\ProduitDao.class
+projets\java\service\Produit_CommandeDao.class
 projets\java\service\TypeClientDao.class
 projets\java\service\CategorieDao.class
 projets\java\service\ClientDao.class
 projets\java\App.class
+projets\java\service\CommandeDao.class
 projets\java\service\MarqueDao.class
 projets\java\service\UserDao.class

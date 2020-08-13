@@ -12,6 +12,8 @@ public class Fabrique {
     private static IUser iUser;
     private static IClient iClient;
     private static ITypeClient iTypeClient;
+    private static IProduit_Commande iProduit_commande;
+    private static ICommande iCommande;
 
     private static void init() throws Exception{
         try {
@@ -22,6 +24,8 @@ public class Fabrique {
             iUser = (IUser) registry.lookup("userRemote");
             iClient = (IClient) registry.lookup("clientRemote");
             iTypeClient = (ITypeClient) registry.lookup("typeclientRemote");
+            iProduit_commande = (IProduit_Commande) registry.lookup("produitcommandeRemote");
+            iCommande = (ICommande) registry.lookup("commandeRemote");
         }
         catch(Exception e){
             throw e;
@@ -106,6 +110,33 @@ public class Fabrique {
         }
 
     }
+
+    public static ICommande getiCommande() throws  Exception{
+        try {
+            if(iCommande == null) {
+                init();
+            }
+            return iCommande;
+        }
+        catch(Exception e){
+            throw e;
+        }
+
+    }
+
+    public static IProduit_Commande getiProduit_commande() throws  Exception{
+        try {
+            if(iProduit_commande == null) {
+                init();
+            }
+            return iProduit_commande;
+        }
+        catch(Exception e){
+            throw e;
+        }
+
+    }
+
 
 
 }

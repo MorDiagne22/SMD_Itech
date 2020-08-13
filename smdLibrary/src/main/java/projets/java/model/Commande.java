@@ -16,16 +16,23 @@ public class Commande implements Serializable {
     @Column(length = 100, nullable = false)
     private String date;
 
+    @Column(length = 100, nullable = false)
+    private String dateLivraison;
+
     @Column
     private Double montant;
+
+    @Column
+    private Integer etat;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_client")
     private Client client;
-
+    /*
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_user")
     private User user;
+    */
 
     @OneToMany(mappedBy = "commande", cascade = CascadeType.ALL)
     private List<Produit_Commande> produitCommandes;
@@ -71,13 +78,6 @@ public class Commande implements Serializable {
         this.client = client;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public List<Produit_Commande> getProduitCommandes() {
         return produitCommandes;
@@ -85,5 +85,21 @@ public class Commande implements Serializable {
 
     public void setProduitCommandes(List<Produit_Commande> produitCommandes) {
         this.produitCommandes = produitCommandes;
+    }
+
+    public Integer getEtat() {
+        return etat;
+    }
+
+    public void setEtat(Integer etat) {
+        this.etat = etat;
+    }
+
+    public String getDateLivraison() {
+        return dateLivraison;
+    }
+
+    public void setDateLivraison(String dateLivraison) {
+        this.dateLivraison = dateLivraison;
     }
 }

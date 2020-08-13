@@ -2,14 +2,15 @@ smd\controller\produit\addProduitController.class
 smd\App.class
 smd\controller\user\addUserController.class
 smd\controller\accueil\accueilController.class
-smd\controller\commande\addCommandeController.class
+smd\controller\commandeclient\clientController.class
 smd\controller\login\loginController.class
 smd\controller\produit\ProduitController.class
-smd\controller\client\clientController.class
+smd\controller\commandeclient\commandeController.class
 smd\controller\user\updateUserController.class
 smd\controller\categorie\addcategorieController.class
 smd\controller\produit\updateProduitController.class
 smd\utils\Fabrique.class
 smd\controller\user\UserController.class
+smd\controller\commandeclient\addCommandeController.class
 smd\utils\Utils.class
 smd\utils\LoadView.class

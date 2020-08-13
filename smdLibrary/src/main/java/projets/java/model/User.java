@@ -33,9 +33,10 @@ public class User implements Serializable {
 
     @Column(length = 100, nullable = false)
     private String password;
-
+    /*
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Commande> commandes;
+    */
 
     public long getId() {
         return id;
@@ -109,11 +110,4 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public List<Commande> getCommandes() {
-        return commandes;
-    }
-
-    public void setCommandes(List<Commande> commandes) {
-        this.commandes = commandes;
-    }
 }

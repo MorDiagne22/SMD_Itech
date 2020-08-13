@@ -1,6 +1,7 @@
 package projets.java.service;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import projets.java.model.Client;
 import projets.java.utils.HibernateUtil;
 
@@ -20,7 +21,15 @@ public class ClientDao extends UnicastRemoteObject implements IClient {
 
     @Override
     public void addClient(Client client) throws RemoteException {
-
+        Transaction t = session.getTransaction();
+        try{
+            t.begin();
+            session.save(client);
+            t.commit();
+        }catch (Exception e){
+            t.rollback();
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -31,5 +40,10 @@ public class ClientDao extends UnicastRemoteObject implements IClient {
     @Override
     public void deleteClient(long l) throws RemoteException {
 
+    }
+
+    @Override
+    public long getIdMax() throws RemoteException {
+        return (long) session.createQuery("SELECT MAX(id) FROM Client").uniqueResult();
     }
 }

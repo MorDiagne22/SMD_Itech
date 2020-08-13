@@ -3,6 +3,7 @@ package projets.java.service;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import projets.java.model.Produit;
+import projets.java.model.Produit_Commande;
 import projets.java.utils.HibernateUtil;
 
 import java.rmi.RemoteException;
@@ -64,4 +65,5 @@ public class ProduitDao extends UnicastRemoteObject implements IProduit {
             e.printStackTrace();
         }
     }
+
 }

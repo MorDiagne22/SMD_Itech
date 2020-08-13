@@ -10,4 +10,5 @@ public interface IClient extends Remote {
     public void addClient(Client c) throws RemoteException;
     public void updateClient(Client c) throws RemoteException;
     public void deleteClient(long id) throws RemoteException;
+    public long getIdMax() throws RemoteException;
 }

@@ -1,6 +1,7 @@
 package projets.java.service;
 
 import projets.java.model.Produit;
+import projets.java.model.Produit_Commande;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
