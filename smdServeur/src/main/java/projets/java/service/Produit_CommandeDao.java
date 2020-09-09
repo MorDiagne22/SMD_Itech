@@ -33,7 +33,9 @@ public class Produit_CommandeDao extends UnicastRemoteObject implements IProduit
 
     @Override
     public List<Produit_Commande> getProduitCommande(Long id) throws RemoteException {
-        return session.createQuery("select p from Produit_Commande p where id =:id").setParameter("id", id).list();
+
+        return session.createQuery("select p from Produit_Commande p where id_commande =:id").setParameter("id", id).list();
 
     }
+
 }

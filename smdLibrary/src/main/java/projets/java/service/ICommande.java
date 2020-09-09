@@ -12,4 +12,5 @@ public interface ICommande extends Remote {
     public void updateCommande(Commande c) throws RemoteException;
     public long getLastIdCommande() throws RemoteException;
     public List<Commande> getAllCommande() throws RemoteException;
+    public List<Commande> getCommandeByIntervalle(String debut, String fin) throws RemoteException;
 }

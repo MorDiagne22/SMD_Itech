@@ -2,6 +2,8 @@ smd\controller\produit\addProduitController.class
 smd\App.class
 smd\controller\user\addUserController.class
 smd\controller\accueil\accueilController.class
+smd\controller\facture\factureController.class
+smd\controller\commandeclient\paiementController.class
 smd\controller\commandeclient\clientController.class
 smd\controller\login\loginController.class
 smd\controller\produit\ProduitController.class

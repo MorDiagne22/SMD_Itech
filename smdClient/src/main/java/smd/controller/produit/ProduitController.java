@@ -18,7 +18,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import projets.java.interfaces.ProduitInterface;
-import projets.java.model.Categorie;
 import projets.java.model.Produit;
 import smd.utils.Fabrique;
 import smd.utils.LoadView;
@@ -30,6 +29,13 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ProduitController implements Initializable, ProduitInterface {
+    public Button btnProduit;
+    public Button btnAccueil;
+    public Button btnCategorie;
+    public Button btnCommande;
+    public Button btnFacture;
+    public Button btnUsers;
+
     @FXML
     private Button btnAjouter;
 
@@ -198,4 +204,33 @@ public class ProduitController implements Initializable, ProduitInterface {
             tableProduit.setItems(sortedData);
         });
     }
+    public void ProduitAction(ActionEvent actionEvent) throws Exception {
+        windows("produit/produit.fxml", "Produit");
+    }
+
+    public void AccueilAction(ActionEvent actionEvent) throws Exception {
+        windows("accueil/accueil.fxml", "Accueil");
+    }
+
+    public void CategorieAction(ActionEvent actionEvent) throws Exception {
+        windows("categorie/categorie.fxml", "Catégorie");
+    }
+
+    public void CommandeAction(ActionEvent actionEvent) throws Exception {
+        windows("commande/commande.fxml", "Commande");
+    }
+
+    public void FactureAction(ActionEvent actionEvent) throws Exception {
+        windows("facture/facture.fxml", "Facture");
+    }
+
+    public void UsersAction(ActionEvent actionEvent) throws Exception {
+        windows("users/users.fxml", "Users");
+    }
+
+    private void windows(String path, String title) throws Exception {
+
+        LoadView.showView(title,path,1);
+    }
+
 }

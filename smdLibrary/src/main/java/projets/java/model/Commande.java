@@ -1,7 +1,11 @@
 package projets.java.model;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,9 +25,13 @@ public class Commande implements Serializable {
 
     @Column
     private Double montant;
-
+    
     @Column
-    private Integer etat;
+    private Double paye;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_Etat")
+    private Etat etat;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_client")
@@ -36,6 +44,9 @@ public class Commande implements Serializable {
 
     @OneToMany(mappedBy = "commande", cascade = CascadeType.ALL)
     private List<Produit_Commande> produitCommandes;
+
+    @OneToMany(mappedBy = "commande", cascade = CascadeType.ALL)
+    private List<Facture> factures;
 
 
     public long getId() {
@@ -78,6 +89,13 @@ public class Commande implements Serializable {
         this.client = client;
     }
 
+    public Double getPaye() {
+        return paye;
+    }
+
+    public void setPaye(Double paye) {
+        this.paye = paye;
+    }
 
     public List<Produit_Commande> getProduitCommandes() {
         return produitCommandes;
@@ -87,12 +105,20 @@ public class Commande implements Serializable {
         this.produitCommandes = produitCommandes;
     }
 
-    public Integer getEtat() {
+    public Etat getEtat() {
         return etat;
     }
 
-    public void setEtat(Integer etat) {
+    public void setEtat(Etat etat) {
         this.etat = etat;
+    }
+
+    public List<Facture> getFactures() {
+        return factures;
+    }
+
+    public void setFactures(List<Facture> factures) {
+        this.factures = factures;
     }
 
     public String getDateLivraison() {

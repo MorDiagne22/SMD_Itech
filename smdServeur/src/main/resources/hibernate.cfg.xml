@@ -27,5 +27,7 @@
         <mapping class="projets.java.model.Produit_Commande"/>
         <mapping class="projets.java.model.Commande"/>
         <mapping class="projets.java.model.Produit"/>
+        <mapping class="projets.java.model.Etat"/>
+        <mapping class="projets.java.model.Facture"/>
     </session-factory>
 </hibernate-configuration>

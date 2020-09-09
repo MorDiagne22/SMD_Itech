@@ -27,9 +27,12 @@ public class App extends Application
             //LoadView.showView("Produit","/produit/produit.fxml",1);
             //LoadView.showView("Users","/users/users.fxml",1);
             //LoadView.showView("Commande","/commande/addCommande.fxml",1);
-            LoadView.showView("Commande","/commande/commande.fxml",1);
-            //LoadView.showView("Categorie","/categorie/addCategorie.fxml",1);
+            //LoadView.showView("Commande","/commande/commande.fxml",1);
+            //LoadView.showView("Facture","/facture/facture.fxml",1);
+            //LoadView.showView("Categorie","/categorie/categorie.fxml",1);
             //LoadView.showView("Client","/client/client.fxml",1);
+            LoadView.showView("Login","login/login.fxml",1);
+            //LoadView.showView("Accueil","accueil/accueil.fxml",1);
         }
         catch(Exception e){
             e.printStackTrace();

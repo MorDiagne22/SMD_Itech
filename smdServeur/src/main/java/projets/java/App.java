@@ -40,6 +40,12 @@ public class App
             IProduit_Commande iProduit_commande = new Produit_CommandeDao();
             registry.bind("produitcommandeRemote", iProduit_commande);
 
+            IEtat iEtat = new EtatDao();
+            registry.bind("etatRemote", iEtat);
+
+            IFacture iFacture = new FactureDao();
+            registry.bind("factureRemote", iFacture);
+
             System.out.println("Serveur lance sur le port 5003");
         }
         catch(Exception ex){

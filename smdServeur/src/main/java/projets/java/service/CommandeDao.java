@@ -59,4 +59,11 @@ public class CommandeDao extends UnicastRemoteObject implements ICommande {
         return session.createQuery("SELECT c FROM Commande c",Commande.class).list();
 
     }
+
+    @Override
+    public List<Commande> getCommandeByIntervalle(String dateDebut, String dateFin) throws RemoteException {
+        return session.createQuery("SELECT c FROM Commande c where date between :debut and :fin").
+                setParameter("debut", dateDebut).
+                setParameter("fin", dateFin).list();
+    }
 }

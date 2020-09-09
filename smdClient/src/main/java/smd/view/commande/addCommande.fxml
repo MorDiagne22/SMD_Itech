@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smd.controller.commandeclient.addCommandeController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smd.controller.commandeclient.addCommandeController">
    <children>
-      <Pane layoutX="187.0" layoutY="58.0" prefHeight="444.0" prefWidth="613.0" style="-fx-background-color: #36648B;">
+      <Pane layoutX="337.0" layoutY="56.0" prefHeight="444.0" prefWidth="613.0" style="-fx-background-color: #36648B;">
          <children>
             <TableView fx:id="tableProduitCommande" layoutX="4.0" layoutY="4.0" prefHeight="202.0" prefWidth="601.0">
               <columns>
@@ -95,9 +95,9 @@
             </Label>
             <Separator layoutX="383.0" layoutY="238.0" prefHeight="3.0" prefWidth="219.0" />
          </children></Pane>
-      <Pane prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #dd1d08;">
+      <Pane layoutX="152.0" prefHeight="58.0" prefWidth="797.0" style="-fx-background-color: #dd1d08;">
          <children>
-            <Label layoutX="200.0" layoutY="9.0" text="Gestion Commande" textFill="#36648b" textOverrun="CLIP">
+            <Label layoutX="227.0" layoutY="9.0" text="Ajout Commande" textFill="#36648b" textOverrun="CLIP">
                <font>
                   <Font name="Copperplate Gothic Bold" size="36.0" />
                </font>
@@ -106,7 +106,7 @@
                </effect>
             </Label>
          </children></Pane>
-      <TableView fx:id="tableProduits" layoutX="2.0" layoutY="103.0" prefHeight="398.0" prefWidth="176.0" styleClass="table">
+      <TableView fx:id="tableProduits" layoutX="152.0" layoutY="102.0" prefHeight="398.0" prefWidth="176.0" styleClass="table">
         <columns>
           <TableColumn fx:id="colProduit" prefWidth="75.0" text="Produits" />
         </columns>
@@ -114,6 +114,40 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField fx:id="tfdRecherche" layoutX="2.0" layoutY="63.0" prefHeight="38.0" prefWidth="176.0" promptText="Rechercher produit" styleClass="search-field" stylesheets="@../../../publics/styles/commande.css" />
+      <TextField fx:id="tfdRecherche" layoutX="152.0" layoutY="63.0" prefHeight="38.0" prefWidth="176.0" promptText="Rechercher produit" styleClass="search-field" stylesheets="@../../../publics/styles/commande.css" />
+      <Pane prefHeight="500.0" prefWidth="150.0" style="-fx-background-color: #36648b;">
+         <children>
+            <Button fx:id="btnProduit" layoutX="1.0" layoutY="146.0" mnemonicParsing="false" onAction="#ProduitAction" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: white;" text="Produit" textFill="#dd1d08">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAccueil" layoutX="1.0" layoutY="88.0" mnemonicParsing="false" onAction="#AccueilAction" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: white;" text="Accueil" textFill="#dd1d08">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCategorie" layoutX="1.0" layoutY="204.0" mnemonicParsing="false" onAction="#CategorieAction" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: white;" text="Catégorie" textFill="#dd1d08">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCommande" layoutX="1.0" layoutY="262.0" mnemonicParsing="false" onAction="#CommandeAction" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: #dd1d08;" text="Commande" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnFacture" layoutX="1.0" layoutY="320.0" mnemonicParsing="false" onAction="#FactureAction" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: WHITE;" text="Facture" textFill="#dd1d08">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUsers" layoutX="1.0" layoutY="378.0" mnemonicParsing="false" onAction="#UsersAction" prefHeight="55.0" prefWidth="148.0" style="-fx-background-color: WHITE;" text="Users" textFill="#dd1d08">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

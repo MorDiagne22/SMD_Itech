@@ -37,7 +37,7 @@ public class loginController implements Initializable {
             if(user != null){
                 if(user.getPassword().equals(password)){
 
-                    windows("/produit/produit.fxml", "Point of Sales");
+                        windows("accueil/accueil.fxml", "Point of Sales");
 
                     //Utils.showMessage("Alert", "Login","Email et Password valide ");
                 }else {

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="509.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="371.0" layoutY="-3.0" mnemonicParsing="false" onAction="#close" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: white;" text="X" textFill="#36648b">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="25.0" layoutY="23.0" prefHeight="474.0" prefWidth="352.0" style="-fx-border-color: #36648b; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="92.0" prefHeight="45.0" prefWidth="171.0" text="Paiement">
+               <font>
+                  <Font name="Broadway" size="30.0" />
+               </font></Label>
+            <TextField fx:id="tfdMtt30" layoutX="33.0" layoutY="242.0" prefHeight="38.0" prefWidth="134.0" promptText="30%" />
+            <Label layoutX="35.0" layoutY="51.0" text="Numéro Commande">
+               <font>
+                  <Font name="Droid Serif Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="97.0" text="Montant total">
+               <font>
+                  <Font name="Droid Serif Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="222.0" text="A payé avant livraison">
+               <font>
+                  <Font name="Droid Serif Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="141.0" text="Montant TVA">
+               <font>
+                  <Font name="Droid Serif Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfdMtt70" layoutX="188.0" layoutY="242.0" prefHeight="38.0" prefWidth="134.0" promptText="70%" />
+            <Label layoutX="204.0" layoutY="222.0" text="A payé à la livraison">
+               <font>
+                  <Font name="Droid Serif Bold" size="10.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnValider" layoutX="35.0" layoutY="423.0" mnemonicParsing="false" onAction="#validerPaiement" prefHeight="38.0" prefWidth="290.0" style="-fx-background-color: green;" text="Valider" textFill="#f8f6f6">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="35.0" layoutY="184.0" text="Net A Payé">
+               <font>
+                  <Font name="Droid Serif Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNumeroCommande" layoutX="204.0" layoutY="41.0" prefHeight="38.0" prefWidth="121.0" textFill="#43d730">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMontant" layoutX="204.0" layoutY="87.0" prefHeight="38.0" prefWidth="121.0" textFill="#43d730">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTva" layoutX="216.0" layoutY="131.0" prefHeight="38.0" prefWidth="121.0" textFill="#43d730">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNetAPaye" layoutX="216.0" layoutY="174.0" prefHeight="38.0" prefWidth="121.0" textFill="#43d730">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="76.0" layoutY="86.0" prefWidth="200.0" />
+            <Separator layoutX="76.0" layoutY="173.0" prefWidth="200.0" />
+            <Separator layoutX="76.0" layoutY="130.0" prefWidth="200.0" />
+            <Separator layoutX="80.0" layoutY="211.0" prefWidth="200.0" />
+            <TextField fx:id="tfdMontant100" layoutX="33.0" layoutY="326.0" prefHeight="38.0" prefWidth="290.0" promptText="100%" />
+            <Label layoutX="38.0" layoutY="304.0" text="Paiement de la totalité">
+               <font>
+                  <Font name="Droid Serif Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="80.0" layoutY="294.0" prefWidth="200.0" />
+            <Label fx:id="lblDate" layoutX="38.0" layoutY="375.0" prefHeight="38.0" prefWidth="200.0">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

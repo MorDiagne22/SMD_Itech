@@ -20,6 +20,7 @@ import projets.java.interfaces.ProduitInterface;
 import projets.java.model.Produit;
 import projets.java.model.ProduitAjouter;
 import smd.utils.Fabrique;
+import smd.utils.LoadView;
 import smd.utils.Utils;
 
 import java.io.IOException;
@@ -29,6 +30,12 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class addCommandeController implements Initializable , ProduitInterface {
+    public Button btnProduit;
+    public Button btnAccueil;
+    public Button btnCategorie;
+    public Button btnCommande;
+    public Button btnFacture;
+    public Button btnUsers;
 
     public TableColumn<Produit, String> colProduit;
     public TextField tfdQteStock;
@@ -156,21 +163,28 @@ public class addCommandeController implements Initializable , ProduitInterface {
 
     public void Ajouter(ActionEvent actionEvent) throws Exception {
         if (!validateInput()) {
-            ProduitAjouter p = new ProduitAjouter();
-            p.setLibelle(tfdLibelle.getText().trim());
-            p.setQuantite(Integer.parseInt(tfdQuantite.getText().trim()));
-            p.setPrix(Integer.parseInt(tfdPrixUnitaire.getText().trim()));
-            p.setTotal(Integer.parseInt(tfdQuantite.getText().trim()) * Integer.parseInt(tfdPrixUnitaire.getText().trim()));
-            ITEMLIST.add(p);
-            tableProduits.getSelectionModel().clearSelection();
-            somme = somme+p.getTotal();
-            chargerTableProduitAjouter();
-            lblSomme.setText(String.valueOf(somme));
-            if (btnEnregistrer.isDisable()) {
-                btnEnregistrer.setDisable(false);
-                btnAnnulerCom.setDisable(false);
+            if(Integer.parseInt(tfdQuantite.getText().trim()) < Integer.parseInt(tfdQteStock.getText().trim())){
+
+                ProduitAjouter p = new ProduitAjouter();
+                p.setLibelle(tfdLibelle.getText().trim());
+                p.setQuantite(Integer.parseInt(tfdQuantite.getText().trim()));
+                p.setPrix(Integer.parseInt(tfdPrixUnitaire.getText().trim()));
+                p.setTotal(Integer.parseInt(tfdQuantite.getText().trim()) * Integer.parseInt(tfdPrixUnitaire.getText().trim()));
+                ITEMLIST.add(p);
+                tableProduits.getSelectionModel().clearSelection();
+                somme = somme+p.getTotal();
+                chargerTableProduitAjouter();
+                lblSomme.setText(String.valueOf(somme));
+                if (btnEnregistrer.isDisable()) {
+                    btnEnregistrer.setDisable(false);
+                    btnAnnulerCom.setDisable(false);
+                }
+                vider_prod();
+
+
+            }else{
+                Utils.showMessage("Alert","Message","Stock non disponible");
             }
-            vider_prod();
         }
     }
 
@@ -269,6 +283,35 @@ public class addCommandeController implements Initializable , ProduitInterface {
         controller.setListe(ITEMLIST);
         controller.setSomme(somme);
 
+    }
+
+    public void ProduitAction(ActionEvent actionEvent) throws Exception {
+        windows("produit/produit.fxml", "Produit");
+    }
+
+    public void AccueilAction(ActionEvent actionEvent) throws Exception {
+        windows("accueil/accueil.fxml", "Accueil");
+    }
+
+    public void CategorieAction(ActionEvent actionEvent) throws Exception {
+        windows("categorie/categorie.fxml", "Catégorie");
+    }
+
+    public void CommandeAction(ActionEvent actionEvent) throws Exception {
+        windows("commande/commande.fxml", "Commande");
+    }
+
+    public void FactureAction(ActionEvent actionEvent) throws Exception {
+        windows("facture/facture.fxml", "Facture");
+    }
+
+    public void UsersAction(ActionEvent actionEvent) throws Exception {
+        windows("users/users.fxml", "Users");
+    }
+
+    private void windows(String path, String title) throws Exception {
+
+        LoadView.showView(title,path,1);
     }
 
 
